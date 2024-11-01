@@ -4,6 +4,7 @@ import os
 import re
 
 # GitHub repository details
+# adjust REPO to match your setup
 REPO = "tyuhasbio5/BATH_build_release"
 API_URL = f"https://api.github.com/repos/{REPO}/releases"
 
