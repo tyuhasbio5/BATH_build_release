@@ -4,8 +4,7 @@ import os
 import re
 
 # GitHub repository details
-# adjust REPO to match your setup
-REPO = "tyuhasbio5/BATH_build_release"
+REPO = "TravisWheelerLab/BATH"
 API_URL = f"https://api.github.com/repos/{REPO}/releases"
 
 def get_releases_data():
@@ -69,8 +68,10 @@ def generate_markdown_table(release):
 
     # Add note about Mac binary signing restriction
     table += (
-        "\nTo address the Mac binary signing restriction, use the following command: "
-        "`sudo xattr -dr com.apple.quarantine <path to file>/my-binary-amd64`\n"
+        "\n***(For Macs) To address the Mac binary signing restriction, use the following command:\n"
+        "\n```\n"
+        "sudo xattr -dr com.apple.quarantine <path to file>/my-binary-amd64\n"
+        "```\n"
     )
     
     return table
