@@ -116,6 +116,11 @@ jobs:
           draft: false
           token: ${{ secrets.GITHUB_TOKEN }}
 
+  update-releases:
+    name: Update Release Table
+    runs-on: ubuntu-latest
+    needs: release
+    steps:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
