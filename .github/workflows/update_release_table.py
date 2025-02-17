@@ -4,7 +4,7 @@ import os
 import re
 
 # GitHub repository details
-REPO = "TravisWheelerLab/BATH"
+REPO = "tyuhasbio5/BATH"
 API_URL = f"https://api.github.com/repos/{REPO}/releases"
 
 def get_releases_data():
